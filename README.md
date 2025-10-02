@@ -1,0 +1,2 @@
+# CS-5800_project2_Paralell_load_balancing_using_MPI
+Homework assignment 
