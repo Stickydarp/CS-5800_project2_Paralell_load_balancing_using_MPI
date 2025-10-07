@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<mpi.h>
 
-#define MAX 100000
+#define MAX 50000
 #define COEFFICIENT 1
 #define WORK_TAG 1
 #define TERMINATE_TAG 2
@@ -138,7 +138,7 @@ int main(int argc, char **argv){
 
     	int N = MAX;  // or pass N via argv
     	double x = 0.99;
-    	int chunk_size = 2;  // seed count, or configurable
+    	int chunk_size = 5;  // seed count, or configurable
 
     	int *coeffArr = NULL;
     	if (rank == 0) {
