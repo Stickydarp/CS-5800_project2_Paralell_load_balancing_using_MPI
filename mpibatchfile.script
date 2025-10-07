@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J MPI_HELLO
-#SBATCH --ntasks=4
+#SBATCH --ntasks=6
 #SBATCH --export=all
 #SBATCH --out=Mill-%a.out
 #SBATCH --time=0-00:10:00

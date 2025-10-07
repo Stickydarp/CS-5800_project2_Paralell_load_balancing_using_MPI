@@ -4,12 +4,21 @@
 
 #define MAX 100000
 #define COEFFICIENT 1
+#define WORK_TAG 1
+#define TERMINATE_TAG 2
 
 
 
+double power(double x, int degree)
+{     
+      if(degree == 0)  return 1;
+      
+      if(degree == 1)  return x;
 
+      return x * power(x, degree - 1);
+}
 
-void run_master(int nprocs, int*coffArr, int N ,double x, int chunk_size){
+void run_master(int nprocs, int*coeffArr, int N ,double x, int chunk_size){
 	int next = 0;
 	int num_workers = nprocs - 1;
     	int workers_done = 0;
@@ -87,14 +96,7 @@ void run_worker(int rank, double x){
 }
 
 
-double power(double x, int degree)
-{     
-      if(degree == 0)  return 1;
-      
-      if(degree == 1)  return x;
 
-      return x * power(x, degree - 1);
-}
 
 double sequential(int coeffArr[], double x)
 {
